@@ -1,0 +1,51 @@
+Linux File Operation:
+	tar xvzf something.tar.gz
+	sudo rm -r /path/to/directory/*
+	sudo cp war/target/service.war /home/tomcat/webapps/
+	chmod 755 file
+
+Git Command:
+	git remote set-url origin git@github.com:qsLampard/backendTool.git
+	git branch --set-upstream shuoQ1 origin/shuoQ1
+	git push origin shuoQ1 —force
+	git pull —-rebase origin master
+	git rebase -i HEAD~14
+	git reset --hard 8861360d50076259dd9d6963509101b535e2816b
+	git fetch origin
+	git rebase -i origin/master
+	git apply shuo.diff
+	git checkout . && git clean -xdf
+
+Host Connection:
+	ssh -N -f -L 15522:stgdb-001.data.ne1.com:1521 login.corp.com
+		ssh -N -f -L [LocalPort]:[TargetHost]:[TargetPort] [MediaHost]
+	scp tunneller.sh myhost.corp.com:
+	scp shuo@myhost.corp.com:/tmp/tunneller.sh /Users/shuo/Downloads
+
+Linux Useful Command:
+	ps aux|grep sth
+	ps -eaf|grep sth
+	killall java
+	curl -v -H "X-Forwarded-For: 70.208.74.161" -H "Accept: application/json" -H "Content-type: application/json" -X POST -d  '{SomeJson}' someURL
+	grep "errorLog" /logs/service.log
+	zcat logs/service.log.gz | grep "errorLog"
+	tail -f logs/service.log | grep "errorLog"
+	sudo -su otherUser
+
+Maven Command:
+	export M2_HOME=/Users/shuo/apache-maven-3.2-2.3
+	export M2=$M2_HOME/bin
+	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
+	mvn clean install -DskipTests=true eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true
+
+MySQL Command:
+	CREATE USER 'shuo'@'localhost';
+	set password for 'shuo'@'localhost' = password('shuo');
+	GRANT ALL PRIVILEGES ON *.* TO 'shuo'@'%' IDENTIFIED BY 'shuo' WITH GRANT OPTION;
+	CREATE DATABASE blacksmithdb character set utf8;
+	CREATE DATABASE blacksmithtestdb character set utf8;
+
+Hadoop Useful Command:
+	hadoop fs -mkdir /hadoopDir
+	hadoop fs -ls /hadoopDir
+	hadoop fs -copyToLocal <hdfsFile>
