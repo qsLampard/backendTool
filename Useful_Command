@@ -6,7 +6,8 @@ Linux File Operation:
 
 Git Command:
 	git remote set-url origin git@github.com:qsLampard/backendTool.git
-	git branch --set-upstream shuoQ1 origin/shuoQ1
+	git branch --set-upstream-to shuoQ1 origin/shuoQ1
+	git push -u origin master
 	git push origin shuoQ1 —force
 	git pull —-rebase origin master
 	git rebase -i HEAD~14
